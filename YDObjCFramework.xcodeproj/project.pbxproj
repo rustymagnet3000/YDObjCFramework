@@ -18,6 +18,7 @@
 		30627FDE2281792400E441B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30627FE52281797500E441B1 /* YDHelloClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDHelloClass.m; sourceTree = "<group>"; };
 		30627FE72281799200E441B1 /* YDHelloClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDHelloClass.h; sourceTree = "<group>"; };
+		30627FF222817F7B00E441B1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +35,7 @@
 		30627FD02281792300E441B1 = {
 			isa = PBXGroup;
 			children = (
+				30627FF222817F7B00E441B1 /* README.md */,
 				30627FDC2281792400E441B1 /* YDObjCFramework */,
 				30627FDB2281792400E441B1 /* Products */,
 			);
