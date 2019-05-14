@@ -1,5 +1,4 @@
 #include "YDHelloClass.h"
-
 @implementation YDHelloClass
 
 -(NSInteger) getRandomNumber
@@ -9,6 +8,6 @@
 
 +(void) sayStaticHello
 {
-    puts("[+]A static hello. Foo.");
+    puts("[+]Hello from a Static Class method.");
 }
 @end
