@@ -112,6 +112,7 @@
 				0F4C33BE2289CED50064CD9E /* Sources */,
 				0F4C33BF2289CED50064CD9E /* Frameworks */,
 				0F4C33C02289CED50064CD9E /* Resources */,
+				0F4C33CD228AC4FF0064CD9E /* YDBuildScript_Swizzle */,
 			);
 			buildRules = (
 			);
@@ -130,7 +131,7 @@
 				30627FD62281792400E441B1 /* Sources */,
 				30627FD72281792400E441B1 /* Frameworks */,
 				30627FD82281792400E441B1 /* Resources */,
-				0F4C33CC228AAEE20064CD9E /* YDUniversalBuilder */,
+				0F4C33CC228AAEE20064CD9E /* YDUniversalBuilder_Alice */,
 			);
 			buildRules = (
 			);
@@ -194,7 +195,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0F4C33CC228AAEE20064CD9E /* YDUniversalBuilder */ = {
+		0F4C33CC228AAEE20064CD9E /* YDUniversalBuilder_Alice */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -203,7 +204,25 @@
 			);
 			inputPaths = (
 			);
-			name = YDUniversalBuilder;
+			name = YDUniversalBuilder_Alice;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/YDBuildScript/UniversalBuild.sh\n";
+		};
+		0F4C33CD228AC4FF0064CD9E /* YDBuildScript_Swizzle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = YDBuildScript_Swizzle;
 			outputFileListPaths = (
 			);
 			outputPaths = (

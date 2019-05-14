@@ -9,7 +9,6 @@
 
 - (NSInteger)fakeRandomNumber
 {
-    
     if ([self respondsToSelector:@selector(fakeRandomNumber)]) {
         NSInteger result = [self fakeRandomNumber];
         NSLog(@"[+] 🍭 swizzled.Original return value: %ld", result);
