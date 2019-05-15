@@ -9,29 +9,30 @@
 
 - (NSInteger)fakeRandomNumber
 {
-    if ([self respondsToSelector:@selector(fakeRandomNumber)]) {
-        NSInteger result = [self fakeRandomNumber];
-        NSLog(@"[+]🍭 swizzled.Original return value: %ld", (long) result);
+    YDGoodbyeClass *goodbye = [[YDGoodbyeClass alloc] init];
+    NSInteger retval = 42;
+    if ([goodbye respondsToSelector:@selector(fakeRandomNumber)]) {
+        NSInteger result = [goodbye fakeRandomNumber];
+        NSLog(@"\n[+] 🍭 swizzled.Original retval: %ld \n[+] 🍭 New retval: %ld", result, retval);
     }
     else {
-        NSLog(@"[+]🍭 swizzled.");
+        NSLog(@"[+] 🍭 swizzled.");
     }
     
-    return 42;
+    return retval;
 }
 
 + (void)load
 {
-    Class targetClass = objc_getClass("YDHelloClass");
+    Class orignalClass = objc_getClass("YDHelloClass");
     
-    if (targetClass != nil) {
-        NSLog(@"[+] 🎣 Found YDHelloClass\n");
-        NSLog(@"[+] 🎣 Placing hook on getRandomNumber\n");
-        Class orignalClass = objc_getClass("YDHelloClass");
+    if (orignalClass != nil) {
+        NSLog(@"\n[+] 🎣 Found YDHelloClass\n[+] 🎣 Placing hook on getRandomNumber\n");
         Method original, swizzled;
         original = class_getInstanceMethod(orignalClass, @selector(getRandomNumber));
         swizzled = class_getInstanceMethod(self, @selector(fakeRandomNumber));
-        method_exchangeImplementations(original, swizzled);
+        if(original != nil && swizzled != nil)
+            method_exchangeImplementations(original, swizzled);
     }
 }
 
