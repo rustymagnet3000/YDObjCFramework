@@ -11,10 +11,10 @@
 {
     if ([self respondsToSelector:@selector(fakeRandomNumber)]) {
         NSInteger result = [self fakeRandomNumber];
-        NSLog(@"[+] 🍭 swizzled.Original return value: %ld", result);
+        NSLog(@"[+]🍭 swizzled.Original return value: %ld", (long) result);
     }
     else {
-        NSLog(@"[+] 🍭 swizzled.");
+        NSLog(@"[+]🍭 swizzled.");
     }
     
     return 42;
