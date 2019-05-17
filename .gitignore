@@ -1,4 +1,3 @@
-YDBobSwizzle.framework
-YDAliceSDK.framework
+*.framework/
 *xcuserdata
 .DS_Store

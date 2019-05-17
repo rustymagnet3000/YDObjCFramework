@@ -6,7 +6,7 @@ echo -e "[+] Derived data location: ${BUILD_DIR}"
 echo -e "[+] Configuration: ${CONFIGURATION}"   # Debug / Release
 echo -e "[+] Build root: ${BUILD_ROOT}\n"
 UNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal
-
+echo -e "[+] Universal folder: ${UNIVERSAL_OUTPUTFOLDER}\n"
 if [ "true" == ${ALREADYINVOKED:-false} ]
 then
   echo "[+] RECURSION: Detected, stopping"

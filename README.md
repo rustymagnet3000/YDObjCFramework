@@ -23,3 +23,8 @@ Bob's code looked to exploit the dynamic nature of Objective-C.  It used a `cons
     swizzled = class_getInstanceMethod(self, @selector(fakeRandomNumber));
     method_exchangeImplementations(original, swizzled);
 ```
+
+### Target 3 : Malloc Gobbler
+I wanted to request gigabytes of memory, until the O/S said "no".  I injected this code into the start-up on an iOS app.  The idea was to provoke exhausted devices to fault when loading SDKs.  But an iPhone 7 would crash the app after 1.4GB.
+
+Next step: slowdown `Gobbler` and put the code onto a Background thread. At the moment the code was blocking the rest of the app from loading.

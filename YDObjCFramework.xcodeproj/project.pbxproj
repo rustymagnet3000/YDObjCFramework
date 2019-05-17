@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F4C33CB2289CF540064CD9E /* YDBobSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C33CA2289CF540064CD9E /* YDBobSwizzle.m */; };
+		0FB4C58D228EDF320017BDFA /* YDMallocGobbler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FB4C57F228EDF0E0017BDFA /* YDMallocGobbler.m */; };
 		30627FDF2281792400E441B1 /* YDAliceFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 30627FDD2281792400E441B1 /* YDAliceFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30627FE62281797500E441B1 /* YDHelloClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 30627FE52281797500E441B1 /* YDHelloClass.m */; };
 		30627FEA22817CC100E441B1 /* YDHelloClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 30627FE72281799200E441B1 /* YDHelloClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -17,6 +18,9 @@
 		0F4C33C22289CED50064CD9E /* YDBobSwizzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YDBobSwizzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4C33C52289CED50064CD9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F4C33CA2289CF540064CD9E /* YDBobSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDBobSwizzle.m; sourceTree = "<group>"; };
+		0FB4C57F228EDF0E0017BDFA /* YDMallocGobbler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDMallocGobbler.m; sourceTree = "<group>"; };
+		0FB4C585228EDF2C0017BDFA /* YDMallocGobbler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YDMallocGobbler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FB4C588228EDF2C0017BDFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30627FDA2281792400E441B1 /* YDAliceSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YDAliceSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30627FDD2281792400E441B1 /* YDAliceFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDAliceFramework.h; sourceTree = "<group>"; };
 		30627FDE2281792400E441B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +31,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		0F4C33BF2289CED50064CD9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FB4C582228EDF2C0017BDFA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -52,12 +63,22 @@
 			path = YDBobSwizzle;
 			sourceTree = "<group>";
 		};
+		0FB4C586228EDF2C0017BDFA /* YDMallocGobbler */ = {
+			isa = PBXGroup;
+			children = (
+				0FB4C57F228EDF0E0017BDFA /* YDMallocGobbler.m */,
+				0FB4C588228EDF2C0017BDFA /* Info.plist */,
+			);
+			path = YDMallocGobbler;
+			sourceTree = "<group>";
+		};
 		30627FD02281792300E441B1 = {
 			isa = PBXGroup;
 			children = (
 				30627FF222817F7B00E441B1 /* README.md */,
 				30627FDC2281792400E441B1 /* YDAliceFramework */,
 				0F4C33C32289CED50064CD9E /* YDBobSwizzle */,
+				0FB4C586228EDF2C0017BDFA /* YDMallocGobbler */,
 				30627FDB2281792400E441B1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +88,7 @@
 			children = (
 				30627FDA2281792400E441B1 /* YDAliceSDK.framework */,
 				0F4C33C22289CED50064CD9E /* YDBobSwizzle.framework */,
+				0FB4C585228EDF2C0017BDFA /* YDMallocGobbler.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +108,13 @@
 
 /* Begin PBXHeadersBuildPhase section */
 		0F4C33BD2289CED50064CD9E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FB4C580228EDF2C0017BDFA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -123,6 +152,25 @@
 			productReference = 0F4C33C22289CED50064CD9E /* YDBobSwizzle.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		0FB4C584228EDF2C0017BDFA /* YDMallocGobbler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FB4C58A228EDF2C0017BDFA /* Build configuration list for PBXNativeTarget "YDMallocGobbler" */;
+			buildPhases = (
+				0FB4C580228EDF2C0017BDFA /* Headers */,
+				0FB4C581228EDF2C0017BDFA /* Sources */,
+				0FB4C582228EDF2C0017BDFA /* Frameworks */,
+				0FB4C583228EDF2C0017BDFA /* Resources */,
+				0FB4C58E228EE0F50017BDFA /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YDMallocGobbler;
+			productName = YDMallocGobbler;
+			productReference = 0FB4C585228EDF2C0017BDFA /* YDMallocGobbler.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		30627FD92281792400E441B1 /* YDAliceSDK */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30627FE22281792400E441B1 /* Build configuration list for PBXNativeTarget "YDAliceSDK" */;
@@ -154,6 +202,9 @@
 					0F4C33C12289CED50064CD9E = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					0FB4C584228EDF2C0017BDFA = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					30627FD92281792400E441B1 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -173,12 +224,20 @@
 			targets = (
 				30627FD92281792400E441B1 /* YDAliceSDK */,
 				0F4C33C12289CED50064CD9E /* YDBobSwizzle */,
+				0FB4C584228EDF2C0017BDFA /* YDMallocGobbler */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0F4C33C02289CED50064CD9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FB4C583228EDF2C0017BDFA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -231,6 +290,23 @@
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/YDBuildScript/UniversalBuild.sh\n";
 		};
+		0FB4C58E228EE0F50017BDFA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/YDBuildScript/UniversalBuild.sh\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -239,6 +315,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F4C33CB2289CF540064CD9E /* YDBobSwizzle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FB4C581228EDF2C0017BDFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FB4C58D228EDF320017BDFA /* YDMallocGobbler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +381,56 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = youdog.com.rusty.YDSwizzle;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0FB4C58B228EDF2C0017BDFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2N3CU4HVH8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YDMallocGobbler/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = youdog.com.rusty.YDMallocGobbler;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0FB4C58C228EDF2C0017BDFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2N3CU4HVH8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YDMallocGobbler/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = youdog.com.rusty.YDMallocGobbler;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -479,6 +613,15 @@
 			buildConfigurations = (
 				0F4C33C72289CED50064CD9E /* Debug */,
 				0F4C33C82289CED50064CD9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FB4C58A228EDF2C0017BDFA /* Build configuration list for PBXNativeTarget "YDMallocGobbler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FB4C58B228EDF2C0017BDFA /* Debug */,
+				0FB4C58C228EDF2C0017BDFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
