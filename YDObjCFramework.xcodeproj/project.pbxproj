@@ -131,7 +131,6 @@
 				30627FD62281792400E441B1 /* Sources */,
 				30627FD72281792400E441B1 /* Frameworks */,
 				30627FD82281792400E441B1 /* Resources */,
-				0F4C33CC228AAEE20064CD9E /* YDUniversalBuilder_Alice */,
 			);
 			buildRules = (
 			);
@@ -165,6 +164,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 30627FD02281792300E441B1;
 			productRefGroup = 30627FDB2281792400E441B1 /* Products */;
@@ -195,24 +195,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0F4C33CC228AAEE20064CD9E /* YDUniversalBuilder_Alice */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = YDUniversalBuilder_Alice;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "$SRCROOT/YDBuildScript/UniversalBuild.sh\n";
-		};
 		0FB4C58E228EE0F50017BDFA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,6 +405,7 @@
 		30627FE32281792400E441B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -449,6 +432,7 @@
 		30627FE42281792400E441B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
