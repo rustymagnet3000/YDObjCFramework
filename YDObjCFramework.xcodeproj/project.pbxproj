@@ -56,7 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				30627FF222817F7B00E441B1 /* README.md */,
-				30627FDC2281792400E441B1 /* YDAliceFramework */,
+				30627FDC2281792400E441B1 /* YDAlice */,
 				0FB4C586228EDF2C0017BDFA /* YDMallocGobbler */,
 				30627FDB2281792400E441B1 /* Products */,
 			);
@@ -71,7 +71,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		30627FDC2281792400E441B1 /* YDAliceFramework */ = {
+		30627FDC2281792400E441B1 /* YDAlice */ = {
 			isa = PBXGroup;
 			children = (
 				30627FDD2281792400E441B1 /* YDAliceFramework.h */,
@@ -79,7 +79,7 @@
 				30627FE72281799200E441B1 /* YDHelloClass.h */,
 				30627FDE2281792400E441B1 /* Info.plist */,
 			);
-			path = YDAliceFramework;
+			path = YDAlice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,7 +431,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/YDAliceFramework/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/YDAlice/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -458,7 +458,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/YDAliceFramework/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/YDAlice/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

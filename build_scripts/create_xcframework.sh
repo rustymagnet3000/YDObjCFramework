@@ -2,13 +2,11 @@
 
 if [ "true" == ${ALREADYINVOKED:-false} ]
 then
-echo "RECURSION: Detected, stopping"
+echo "warning: Recusion detected, stopping."
 else
 export ALREADYINVOKED="true"
 
-echo "[*] Creating XCFramework"
-
-
+echo "[*]Creating XCFramework"
 
 FRAMEWORK_FOLDER_NAME="${TARGETNAME}_XCFramework"
 FRAMEWORK_NAME="${TARGETNAME}"
@@ -17,19 +15,11 @@ FRAMEWORK_PATH="${HOME}/Desktop/${FRAMEWORK_FOLDER_NAME}/${FRAMEWORK_NAME}.xcfra
 SIMULATOR_ARCHIVE_PATH="${TARGETNAME}/${FRAMEWORK_FOLDER_NAME}/simulator.xcarchive"
 IOS_DEVICE_ARCHIVE_PATH="${TARGETNAME}/${FRAMEWORK_FOLDER_NAME}/iOS.xcarchive"
 
-echo ${FRAMEWORK_NAME}
-echo ${FRAMEWORK_PATH}
-echo ${SIMULATOR_ARCHIVE_PATH}
-echo ${IOS_DEVICE_ARCHIVE_PATH}
+# Remove the xcframework, if it already existed on the desktop
+rm -rf "${HOME}/Desktop/${FRAMEWORK_FOLDER_NAME}"
+echo "Deleted ${HOME}/Desktop/${FRAMEWORK_FOLDER_NAME}"
 
-rm -rf "${HOME}/Desktop/${FRAMEWORK_FOLDER_NAME}/${FRAMEWORK_FOLDER_NAME}"
-echo "Deleted ${FRAMEWORK_FOLDER_NAME}"
-
-mkdir "${FRAMEWORK_FOLDER_NAME}"
-echo "Created ${FRAMEWORK_FOLDER_NAME}"
-echo "Archiving ${FRAMEWORK_NAME}"
-echo "SIMULATOR_ARCHIVE_PATH= ${SIMULATOR_ARCHIVE_PATH}"
-
+# Create archive files for iOS and iOS simulators
 xcodebuild archive -scheme ${SCHEME} \
  -destination="iOS Simulator" \
  -archivePath "${SIMULATOR_ARCHIVE_PATH}" \
@@ -44,5 +34,19 @@ xcodebuild archive -scheme ${SCHEME} \
  SKIP_INSTALL=NO \
  BUILD_LIBRARIES_FOR_DISTRIBUTION=YES
 
+# Create framework on Desktop. Takes source archive files from local repo
+xcodebuild -create-xcframework  \
+ -framework ${SIMULATOR_ARCHIVE_PATH}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework \
+ -framework ${IOS_DEVICE_ARCHIVE_PATH}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework \
+ -output "${FRAMEWORK_PATH}"
  
+rm -rf "${SIMULATOR_ARCHIVE_PATH}"
+rm -rf "${IOS_DEVICE_ARCHIVE_PATH}"
+
+# Remove the archives, that are no longer required
+rm -rf "${IOS_DEVICE_ARCHIVE_PATH}"
+
+# Open final framework
+open "${HOME}/Desktop/${FRAMEWORK_FOLDER_NAME}"
+
 fi
