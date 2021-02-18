@@ -131,6 +131,7 @@
 				30627FD62281792400E441B1 /* Sources */,
 				30627FD72281792400E441B1 /* Frameworks */,
 				30627FD82281792400E441B1 /* Resources */,
+				F5C0819425DE399A00E03BA4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -211,6 +212,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/YDBuildScript/UniversalBuild.sh\n";
+		};
+		F5C0819425DE399A00E03BA4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${SRCROOT}/build_scripts/create_xcframework.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

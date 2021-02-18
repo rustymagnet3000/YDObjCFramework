@@ -24,6 +24,7 @@ xcodebuild archive \
  -scheme YDAliceSDK-iOS \
  -archivePath ~/Desktop/iOS.xcarchive \
  -destination "generic/platform=iOS"
+ SKIP_INSTALL=NO
 
 xcodebuild archive \
  -scheme YDAliceSDK-iOS \
